@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxN-oA-HkL">
+                                <rect key="frame" x="20" y="85" width="260" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Body" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kkZ-kh-Vkt">
+                                <rect key="frame" x="20" y="126" width="374" height="352"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yaw-VE-WyY">
+                                <rect key="frame" x="20" y="524" width="168" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="View Post"/>
+                                <connections>
+                                    <action selector="viewPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yol-Np-OuS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-Et-aPR">
+                                <rect key="frame" x="20" y="596" width="199" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yaw-VE-WyY" firstAttribute="top" secondItem="kkZ-kh-Vkt" secondAttribute="bottom" constant="46" id="3hm-Ht-ICF"/>
+                            <constraint firstItem="EP7-Et-aPR" firstAttribute="top" secondItem="Yaw-VE-WyY" secondAttribute="bottom" constant="38" id="4n7-ww-Ef9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EP7-Et-aPR" secondAttribute="bottom" constant="232" id="4op-FQ-GLQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zxN-oA-HkL" secondAttribute="trailing" constant="134" id="7RZ-J2-Evx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yaw-VE-WyY" secondAttribute="trailing" constant="226" id="99U-As-MSK"/>
+                            <constraint firstItem="kkZ-kh-Vkt" firstAttribute="top" secondItem="zxN-oA-HkL" secondAttribute="bottom" constant="47" id="BKJ-8L-sLh"/>
+                            <constraint firstItem="Yaw-VE-WyY" firstAttribute="top" secondItem="kkZ-kh-Vkt" secondAttribute="bottom" constant="46" id="EqT-YW-uab"/>
+                            <constraint firstItem="Yaw-VE-WyY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PPF-uh-bPq"/>
+                            <constraint firstItem="zxN-oA-HkL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="VQ1-D8-p0s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yaw-VE-WyY" secondAttribute="bottom" constant="304" id="XWd-vH-OhV"/>
+                            <constraint firstItem="kkZ-kh-Vkt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yod-Na-vam"/>
+                            <constraint firstItem="zxN-oA-HkL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ddO-3V-7He"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kkZ-kh-Vkt" secondAttribute="trailing" constant="20" id="eKD-XW-KO3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EP7-Et-aPR" secondAttribute="trailing" constant="195" id="ihI-a2-y73"/>
+                            <constraint firstItem="kkZ-kh-Vkt" firstAttribute="top" secondItem="zxN-oA-HkL" secondAttribute="bottom" constant="17" id="s7k-0Z-UMA"/>
+                            <constraint firstItem="EP7-Et-aPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wxO-ec-05L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="postBody" destination="kkZ-kh-Vkt" id="gV0-lt-3WN"/>
+                        <outlet property="postId" destination="EP7-Et-aPR" id="4bX-aZ-ncX"/>
+                        <outlet property="postTitle" destination="zxN-oA-HkL" id="hBI-w3-dne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
 </document>

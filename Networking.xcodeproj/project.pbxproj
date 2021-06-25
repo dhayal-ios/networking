@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370377FB2685B37800B969A2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 370377FA2685B37800B969A2 /* Default-568h@2x.png */; };
+		370378002685B83800B969A2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370377FF2685B83800B969A2 /* Post.swift */; };
+		370378022685BA5E00B969A2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370378012685BA5E00B969A2 /* PostService.swift */; };
 		37E0DF9126844B5000C23E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0DF9026844B5000C23E21 /* AppDelegate.swift */; };
 		37E0DF9326844B5000C23E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0DF9226844B5000C23E21 /* SceneDelegate.swift */; };
 		37E0DF9526844B5000C23E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0DF9426844B5000C23E21 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370377FA2685B37800B969A2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		370377FF2685B83800B969A2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		370378012685BA5E00B969A2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		37E0DF8D26844B5000C23E21 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E0DF9026844B5000C23E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E0DF9226844B5000C23E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +43,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370377F82685AD5F00B969A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37E0DF9926844B5200C23E21 /* Assets.xcassets */,
+				37E0DF9E26844B5200C23E21 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		370377FC2685B7F100B969A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				370377FF2685B83800B969A2 /* Post.swift */,
+				370378012685BA5E00B969A2 /* PostService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		37E0DF8426844B5000C23E21 = {
 			isa = PBXGroup;
 			children = (
+				370377FA2685B37800B969A2 /* Default-568h@2x.png */,
 				37E0DF8F26844B5000C23E21 /* Networking */,
 				37E0DF8E26844B5000C23E21 /* Products */,
 			);
@@ -56,13 +81,13 @@
 		37E0DF8F26844B5000C23E21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				370377FC2685B7F100B969A2 /* Model */,
+				370377F82685AD5F00B969A2 /* Supporting Files */,
 				37E0DF9026844B5000C23E21 /* AppDelegate.swift */,
 				37E0DF9226844B5000C23E21 /* SceneDelegate.swift */,
 				37E0DF9426844B5000C23E21 /* ViewController.swift */,
 				37E0DF9626844B5000C23E21 /* Main.storyboard */,
-				37E0DF9926844B5200C23E21 /* Assets.xcassets */,
 				37E0DF9B26844B5200C23E21 /* LaunchScreen.storyboard */,
-				37E0DF9E26844B5200C23E21 /* Info.plist */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -126,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37E0DF9D26844B5200C23E21 /* LaunchScreen.storyboard in Resources */,
+				370377FB2685B37800B969A2 /* Default-568h@2x.png in Resources */,
 				37E0DF9A26844B5200C23E21 /* Assets.xcassets in Resources */,
 				37E0DF9826844B5000C23E21 /* Main.storyboard in Resources */,
 			);
@@ -139,8 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37E0DF9526844B5000C23E21 /* ViewController.swift in Sources */,
+				370378022685BA5E00B969A2 /* PostService.swift in Sources */,
 				37E0DF9126844B5000C23E21 /* AppDelegate.swift in Sources */,
 				37E0DF9326844B5000C23E21 /* SceneDelegate.swift in Sources */,
+				370378002685B83800B969A2 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU36SZBL86;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU36SZBL86;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
